@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  rstudio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sample_project
+    ports:
+      - 8787:8787
+    environment:
+      - PASSWORD=${PASSWORD}
+      - USERID=${USERID}
+    volumes:
+      - ~/.aws/credentials:/home/rstudio/.aws/credentials
+      - ${PATH_TO_RSTUDIO_CONFIG}:/home/rstudio/.config/rstudio
+      - ${RENV_PATHS_CACHE_HOST}:/home/rstudio/.local/share/renv/cache
+      - ${PWD}:/home/rstudio/SampleProject
+    tty: true
+    stdin_open: true
