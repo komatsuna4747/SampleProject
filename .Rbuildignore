@@ -1,2 +1,8 @@
+\.env$
+^Dockerfile$
+^docker-compose\.yaml$
+^renv$
+^renv\.lock$
 ^SampleProject\.Rproj$
 ^\.Rproj\.user$
+^LICENSE\.md$
