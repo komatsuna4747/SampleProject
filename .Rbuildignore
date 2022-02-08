@@ -6,3 +6,5 @@
 ^SampleProject\.Rproj$
 ^\.Rproj\.user$
 ^LICENSE\.md$
+^_targets$
+^_targets\.R$
